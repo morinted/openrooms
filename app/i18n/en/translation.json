@@ -1,0 +1,22 @@
+{ "_brand-styled": "uOttawa Room Finder"
+, "day": "Day"
+, "footer-content":
+  [ "2016 Ted Morin"
+  , "Open Room Finder"
+  ]
+, "locks-at": "Locking Time"
+, "room-page-welcome": "Find Open Rooms"
+, "html-not-found-message": "No page found. Try <a href=\"/rooms\">looking for rooms</a>."
+, "navigation":
+  { "broken": "Broken Link"
+  , "open-rooms": "Find Rooms"
+  }
+, "next-class": "Next Class in Room"
+, "room": "Room Number"
+, "sort-by": "Sort By"
+, "title":
+  { "not-found": "No page found"
+  }
+, "time": "Time"
+, "tomorrow": "Tomorrow"
+}
