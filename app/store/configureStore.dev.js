@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import { reduxReactRouter } from 'redux-router'
 import DevTools from '../containers/DevTools'
-import createHistory from 'history/lib/createHashHistory'
+import createHistory from 'history/lib/createBrowserHistory'
 import routes from '../routes'
 import thunk from 'redux-thunk'
 import createLogger from 'redux-logger'

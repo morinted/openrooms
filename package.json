@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "node ./webpack/server.js",
-    "build": "node node_modules/webpack/bin/webpack.js -p --colors --progress --config=./webpack/webpack.prod.js",
+    "build": "NODE_ENV=production node node_modules/webpack/bin/webpack.js -p --colors --progress --config=./webpack/webpack.prod.js",
     "create": "babel-node ./app/scripts/room_script.js"
   },
   "author": "Clearwater Clinical",
