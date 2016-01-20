@@ -3,7 +3,7 @@ var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-var cwcRootPath = '/'
+var cwcRootPath = '/openrooms'
 module.exports =
   { context: path.resolve(__dirname, '..')
   , entry:
@@ -15,7 +15,7 @@ module.exports =
     { path: path.join(__dirname, '../build')
     , filename: 'cwc-[hash:4].js'
     /*eslint-disable*/
-    , publicPath: cwcRootPath
+    , publicPath: cwcRootPath + '/'
     /*eslint-enable*/
     }
   , plugins:
