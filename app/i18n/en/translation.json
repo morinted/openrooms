@@ -13,6 +13,7 @@
   }
 , "next-class": "Next Class in Room"
 , "room": "Room Number"
+, "room-instructions": "You can use this tool to find unlocked rooms that won't be occupied for a while. This makes a great place to hang out for studying groups or meetings. Other Universities like Carleton leave their rooms unlocked during downtime, but uOttawa does not. I believe it is against the rules to occupy locked rooms, so I don't recommend it. This is more of a technical demo to show what you can do with data. By using this software, you agree to not hold me responsible if you break any rules and get into trouble relating to these rooms. *Rooms with asterisks are lab rooms, meaning they are usually manually locked and absolutely should not be used as open rooms, especially because they contain lab equipment and you would be liable for any damage or property loss. Thank you, and be safe."
 , "sort-by": "Sort By"
 , "title":
   { "not-found": "No page found"

@@ -24,6 +24,7 @@ export const cols =
   [ 'room'
   , 'locks-at'
   , 'next-class'
+  , 'is-lab'
   ]
 const calcTimes = (start, end, list = []) => {
   if (start.localeCompare(end) >= 0) {

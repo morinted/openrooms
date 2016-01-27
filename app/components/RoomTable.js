@@ -1,8 +1,6 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
 import { t } from '../i18n'
-import { days, times } from '../constants'
-import { hmToString, parseTime } from '../scripts/util'
 
 export default class RoomTable extends React.Component {
   sorted = name =>
@@ -10,9 +8,9 @@ export default class RoomTable extends React.Component {
   render () {
     const { openRooms } = this.props
     const roomTable =
-      openRooms.map(([ room, lock, next ]) =>
+      openRooms.map(([ room, lock, next, isLab ]) =>
         <tr key={room}>
-          <td>{room}</td>
+          <td>{room}{ isLab ? '*' : ''}</td>
           <td>{t(lock)}</td>
           <td>{t(next)}</td>
         </tr>

@@ -15,6 +15,7 @@ class RoomPage extends React.Component {
     return (
       <Panel>
         <h1>{t('room-page-welcome')}</h1>
+        <p>{t('room-instructions')}</p>
         <RoomForm
           onSubmit={getRooms}/>
         <RoomTable

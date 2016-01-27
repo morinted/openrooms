@@ -1,4 +1,5 @@
 import occupiedByDate from 'json!./activities.json'
+import roomIsLab from 'json!./roomislab.json'
 import { hmToString
        , parseTime
        , addMinutes
@@ -35,7 +36,7 @@ const checkDate = (day, hour, minute) => {
         )
         .sort()
     if (until === closes) return false
-    return [ room, closes, until ]
+    return [ room, closes, until, roomIsLab[room] ]
   }).filter(x => x) // removes 'false's
     .sort()
   return open

@@ -9,7 +9,7 @@ fs.readFile('./activities.csv', 'utf8', (err, csv) => {
       .split('\n')
       .map(x => x.split(','))
       .map((
-        [ // type
+        [ type
         , // number
         , course
         , // semester
@@ -23,6 +23,7 @@ fs.readFile('./activities.csv', 'utf8', (err, csv) => {
           , start
           , end
           , room
+          , type
           })
       )
       .filter(({ room = '' } = {}) => {
@@ -33,6 +34,15 @@ fs.readFile('./activities.csv', 'utf8', (err, csv) => {
             !lcRoom.includes(x)
           )
       })
+  const roomIsLab =
+    rooms.reduce((list, { type, room }) => {
+      if (type.toLowerCase().includes('laboratory')) {
+        list[room] = true
+      } else if (!list[room]) {
+        list[room] = false
+      }
+      return list
+    }, {})
   const occupiedByDate =
     rooms.reduce(
       (p, { day
@@ -70,9 +80,13 @@ fs.readFile('./activities.csv', 'utf8', (err, csv) => {
         )
       }, {})
 
-  fs.writeFile('activities.json', JSON.stringify(occupiedByDate), err => {
+  fs.writeFile('app/scripts/activities.json', JSON.stringify(occupiedByDate), err => {
     if (err) throw err
     console.log('Wrote activities.json')
+  })
+  fs.writeFile('app/scripts/roomislab.json', JSON.stringify(roomIsLab), err => {
+    if (err) throw err
+    console.log('Wrote roomislab.json')
   })
 })
 
